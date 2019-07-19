@@ -22,7 +22,6 @@ function main() {
         return resp.json();
       }) // convert to json
       .then(function(data) {
-        console.log(data);
         displayWeather(data);
       })
       .catch(function() {
@@ -38,9 +37,11 @@ function main() {
     const fahrenheit = Math.round(
       (parseFloat(data.main.temp) - 273.15) * 1.8 + 32
     );
+    let isCelcius = true;
+
     location.innerHTML = data.name;
     description.innerHTML = data.weather[0].description;
-    temp.innerHTML = `${celcius}&deg;C/${fahrenheit}&deg;F`;
+    temp.innerHTML = `${celcius}&deg;C`;
     input.classList.remove("validation-border");
     validationBox.classList.remove("enabled");
     weatherContent.classList.remove("disabled");
@@ -48,6 +49,15 @@ function main() {
       "src",
       `http://openweathermap.org/img/w/${data.weather[0].icon}.png`
     );
+
+    function changeScale() {
+      isCelcius
+        ? (temp.innerHTML = `${fahrenheit}&deg;F`)
+        : (temp.innerHTML = `${celcius}&deg;C`);
+      isCelcius = !isCelcius;
+    }
+
+    temp.addEventListener("click", changeScale);
   }
 
   searchButton.addEventListener("click", function() {

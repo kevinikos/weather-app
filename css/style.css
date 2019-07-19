@@ -8,9 +8,16 @@
 }
 
 /* layout */
-header .max-width {
+header .max-width,
+footer .max-width {
   width: 950px;
   margin: 0 auto;
+}
+body {
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* header */
@@ -87,6 +94,9 @@ button:hover {
   height: 70px;
   width: 70px;
 }
+#temp {
+  cursor: pointer;
+}
 .validation-box {
   height: 45px;
   width: 220px;
@@ -122,8 +132,16 @@ button:hover {
 .validation-border {
   border-color: rgba(197, 18, 68, 0.7);
 }
+
 /* footer */
 footer {
   height: 110px;
+  line-height: 110px;
   background-color: #f5f4f6;
+}
+footer a {
+  float: right;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 1px;
+  text-decoration: none;
 }
