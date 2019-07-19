@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="app.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="max-width">
+        <h1>What's the weather like?</h1>
+      </div>
+    </header>
+    <section>
+      <div class="max-width">
+        <div class="container">
+          <div class="weather-input">
+            <input id="input" type="text" placeholder="City Name" />
+            <button id="searchBtn">Add City</button>
+            <div class="validation-box">
+              <p>This city does not exist</p>
+            </div>
+          </div>
+          <div class="weather-content">
+            <div class="column">
+              <img id="icon" src="" alt="weather icon" />
+            </div>
+            <div class="column">
+              <h1 id="location"></h1>
+              <p id="description"></p>
+              <p id="temp"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer></footer>
+  </body>
+</html>
