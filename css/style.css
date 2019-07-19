@@ -23,6 +23,7 @@ body {
 /* header */
 header {
   height: 130px;
+  width: 100%;
   line-height: 120px;
   background-color: #00bbb6;
   color: white;
@@ -136,6 +137,7 @@ button:hover {
 /* footer */
 footer {
   height: 110px;
+  width: 100%;
   line-height: 110px;
   background-color: #f5f4f6;
 }
